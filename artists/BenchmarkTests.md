@@ -16,32 +16,32 @@ Completed | 1000 | 1000 | 2000 | 2000 |
 
 ###Test 1
 
-**Parameters**
->Requests: 1000
-Concurrency: 100
+>**Parameters**
+> - Requests: 1000
+> - Concurrency: 100
 
-**Results**
+>**Results**
 > - Server Software: Werkzeug/0.9.6
 > - Server Hostname:localhost
 > - Server Port:5000
 
->Document Path:          /artists/
-Document Length:        42300 bytes
+> - Document Path:          /artists/
+> - Document Length:        42300 bytes
 
->Concurrency Level:      100
-Time taken for tests:   122.684 seconds
-Complete requests:      1000
-Failed requests:        0
-Total transferred:      42448000 bytes
-HTML transferred:       42300000 bytes
-Requests per second:    8.15 [#/sec] (mean)
-Time per request:       12268.378 [ms] (mean)
-Time per request:       122.684 [ms] (mean, across all concurrent requests)
-Transfer rate:          337.89 [Kbytes/sec] received
+> - Concurrency Level:      100
+> - Time taken for tests:   122.684 seconds
+> - Complete requests:      1000
+> - Failed requests:        0
+> - Total transferred:      42448000 bytes
+> - HTML transferred:       42300000 bytes
+> - Requests per second:    8.15 [#/sec] (mean)
+> - Time per request:       12268.378 [ms] (mean)
+> -Time per request:       122.684 [ms] (mean, across all concurrent requests)
+> - Transfer rate:          337.89 [Kbytes/sec] received
 
->Connection Times (ms)
-              min  mean[+/-sd] median   max
-Connect:        0    1   3.2      0      11
+> - Connection Times (ms)
+> - Test | min | mean[+/-sd] | median |  max
+Connect | 0 | 1 | 3.2 | 0 | 11
 Processing:   132 11667 2134.6  12240   12498
 Waiting:      123 11666 2134.7  12239   12498
 Total:        135 11668 2131.9  12240   12498
