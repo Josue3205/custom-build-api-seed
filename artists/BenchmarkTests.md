@@ -1,6 +1,12 @@
 Benchmark Tests
 ---------------
 
+**Analysis:**
+>Test 1 seemed like a logic starting point, so I used that as a reference point for the other Tests.
+Test 2, I lowered the concurrence to 10 and it did not change much. The Time per Request took slightly longer.
+Test 3, I increased the amount of requests to 2000 and as I correctly assumed, the Total Time increased by double, and the concurrency stayed at 100 but the Time per Request increased a bit.
+Tes 4, I kept the requests at 2000, but lowered the concurrenct to 10, it was not much different from Test 3, since the Time per Request was about the same and the request count stayed the same. Therefore the total time should be similar.
+
 ###Data Table
 
 Test Name | Test 1 | Test 2 | Test 3 | Test 4 |
