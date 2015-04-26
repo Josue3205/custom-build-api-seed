@@ -25,7 +25,7 @@ Completed Requests | 1000 | 1000 | 2000 | 2000 |
  - Server Hostname:        localhost
  - Server Port:            5000
 
- > - Document Path:          /artists/
+ - Document Path:          /artists/
  - Document Length:        19 bytes
 
  > - Concurrency Level:      100
