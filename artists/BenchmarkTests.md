@@ -18,76 +18,77 @@ Completed Requests | 1000 | 1000 | 2000 | 2000 |
 
 **Parameters:**
 > - Requests: 1000
- - Concurrency: 100
+> - Concurrency: 100
 
 **Results:**
 > - Server Software:        Werkzeug/0.9.6
- - Server Hostname:        localhost
- - Server Port:            5000
- - Document Path:          /artists/
- - Document Length:        19 bytes
- - Concurrency Level:      100
- - Time taken for tests:   4.089 seconds
- - Complete requests:      1000
- - Failed requests:        0
- - Total transferred:      164000 bytes
- - HTML transferred:       19000 bytes
- - Requests per second:    244.57 [#/sec] (mean)
- - Time per request:       408.877 [ms] (mean)
- - Time per request:       4.089 [ms] (mean, across all concurrent requests)
- - Transfer rate:          39.17 [Kbytes/sec] received
+> - Server Hostname:        localhost
+> - Server Port:            5000
+> - Document Path:          /artists/
+> - Document Length:        19 bytes
+> - Concurrency Level:      100
+> - Time taken for tests:   4.089 seconds
+> - Complete requests:      1000
+> - Failed requests:        0
+> - Total transferred:      164000 bytes
+> - HTML transferred:       19000 bytes
+> - Requests per second:    244.57 [#/sec] (mean)
+> - Time per request:       408.877 [ms] (mean)
+> - Time per request:       4.089 [ms] (mean, across all concurrent requests)
+> - Transfer rate:          39.17 [Kbytes/sec] received
 
  - Connection Times (ms)
 
-Test | min | mean(+/-sd) | median | max |
+Test | min | mean[+/-sd] | median | max |
 ---- | --- | ----------- | ------ | --- |
 Connect | 0 | 1 | 3.1 | 0 | 11 |
 Processing | 8 | 388 | 71.9 | 407 | 423 |
 Waiting | 2 | 387 | 71.9 | 407 | 422 |
 Total | 13 | 389 | 69.2 | 407 | 423 |
 
-> - Percentage of the requests served within a certain time (ms)
- - 50%    407
- - 66%    408
- - 75%    409
- - 80%    409
- - 90%    419
- - 95%    421
- - 98%    422
- - 99%    422
- - 100%    423 (longest request)
+ - Percentage of the requests served within a certain time (ms)
+
+Percent | Request Count | 
+50%  |  407 |
+66%  |  408 |
+75%  |  409 |
+80%  |  409 |
+90%  |  419 |
+95%  |  421 |
+98%  |  422 |
+99%  |  422 |
+100%  |  423 (longest request) |
 
 ###Test 2
 
->**Parameters:**
- - Requests: 1000
- - Concurrency: 10
+**Parameters:**
+> - Requests: 1000
+> - Concurrency: 10
 
->**Results:**
- - Server Software:        Werkzeug/0.9.6
- - Server Hostname:        localhost
- - Server Port:            5000
+**Results:**
+> - Server Software:        Werkzeug/0.9.6
+> - Server Hostname:        localhost
+> - Server Port:            5000
+> - Document Path:          /artists/
+> - Document Length:        19 bytes
+> - Concurrency Level:      10
+> - Time taken for tests:   4.109 seconds
+> - Complete requests:      1000
+> - Failed requests:        0
+> - Total transferred:      164000 bytes
+> - HTML transferred:       19000 bytes
+> - Requests per second:    243.37 [#/sec] (mean)
+> - Time per request:       41.090 [ms] (mean)
+> - Time per request:       4.109 [ms] (mean, across all concurrent requests)
+> - Transfer rate:          38.98 [Kbytes/sec] received
 
- > - Document Path:          /artists/
- - Document Length:        19 bytes
+ - Connection Times (ms)
 
- > - Concurrency Level:      10
- - Time taken for tests:   4.109 seconds
- - Complete requests:      1000
- - Failed requests:        0
- - Total transferred:      164000 bytes
- - HTML transferred:       19000 bytes
- - Requests per second:    243.37 [#/sec] (mean)
- - Time per request:       41.090 [ms] (mean)
- - Time per request:       4.109 [ms] (mean, across all concurrent requests)
- - Transfer rate:          38.98 [Kbytes/sec] received
-
-> - Connection Times (ms)
-              min  mean[+/-sd] median   max
-Connect:        0    0   0.0      0       0
-Processing:     4   41   2.8     40      59
-Waiting:        4   41   2.8     40      59
-Total:          4   41   2.8     40      59
+Test | min | mean[+/-sd] | median |  max |
+Connect   |     0  |  0 |  0.0   |   0  |     0 |
+Processing |    4  | 41 |  2.8   |  40  |    59 |
+Waiting     |   4  | 41 |  2.8   |  40  |    59 |
+Total       |   4  | 41 |  2.8   |  40  |    59 |
 
  - Percentage of the requests served within a certain time (ms)
  
@@ -105,46 +106,48 @@ Percent | Request Count |
 
 ###Test 3
 
->**Parameters:**
- - Requests: 2000
- - Concurrency: 100
+**Parameters:**
+> - Requests: 2000
+> - Concurrency: 100
 
->**Results:**
- - Server Software:        Werkzeug/0.9.6
- - Server Hostname:        localhost
- - Server Port:            5000
-
+**Results:**
+> - Server Software:        Werkzeug/0.9.6
+> - Server Hostname:        localhost
+> - Server Port:            5000
 > - Document Path:          /artists/
- - Document Length:        19 bytes
-
+> - Document Length:        19 bytes
 > - Concurrency Level:      100
- - Time taken for tests:   8.646 seconds
- - Complete requests:      2000
- - Failed requests:        0
- - Total transferred:      328000 bytes
- - HTML transferred:       38000 bytes
- - Requests per second:    231.31 [#/sec] (mean)
- - Time per request:       432.314 [ms] (mean)
- - Time per request:       4.323 [ms] (mean, across all concurrent requests)
- - Transfer rate:          37.05 [Kbytes/sec] received
+> - Time taken for tests:   8.646 seconds
+> - Complete requests:      2000
+> - Failed requests:        0
+> - Total transferred:      328000 bytes
+> - HTML transferred:       38000 bytes
+> - Requests per second:    231.31 [#/sec] (mean)
+> - Time per request:       432.314 [ms] (mean)
+> - Time per request:       4.323 [ms] (mean, across all concurrent requests)
+> - Transfer rate:          37.05 [Kbytes/sec] received
 
-> - Connection Times (ms)
-              min  mean[+/-sd] median   max
-Connect:        0    0   0.3      0       2
-Processing:    12  422  60.7    422     538
-Waiting:       12  422  60.7    422     538
-Total:         14  422  60.4    422     538
+ - Connection Times (ms)
+ 
+Test | min | mean[+/-sd] | median |  max |
+---- | --- | ----------- | ------ | ---- |
+Connect    |    0  |   0 |  0.3  |    0   |    2 |
+Processing |   12 | 422 | 60.7  |  422   |  538 |
+Waiting    |   12 | 422 | 60.7  |  422   |  538 |
+Total     |    14 | 422 | 60.4  |  422   |  538 |
 
-> - Percentage of the requests served within a certain time (ms)
- - 50%    422
- - 66%    426
- - 75%    440
- - 80%    447
- - 90%    466
- - 95%    494
- - 98%    530
- - 99%    534
- - 100%    538 (longest request)
+ - Percentage of the requests served within a certain time (ms)
+ 
+Percent | Request Count |
+50%  |  422 |
+66%  |  426 |
+75%  |  440 |
+80%  |  447 |
+90%  |  466 |
+95%  |  494 |
+98%  |  530 |
+99%  |  534 |
+100%  |  538 (longest request) |
 
 ###Test 4
 
