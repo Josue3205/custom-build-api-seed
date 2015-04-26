@@ -48,8 +48,8 @@ Total | 13 | 389 | 69.2 | 407 | 423 |
 
 **Percentage of the requests served within a certain time (ms):**
 
-Percent | Count |
-------- | ----- |
+Percent | Time |
+------- | ---- |
 50%  |  407 |
 66%  |  408 |
 75%  |  409 |
@@ -94,8 +94,8 @@ Total       |   4  | 41 |  2.8   |  40  |    59 |
 
 **Percentage of the requests served within a certain time (ms):**
  
-Percent | Count |
-------- | ----- |
+Percent | Time |
+------- | ---- |
 50%  |   40 |
 66%  |   41 |
 75%  |   41 |
@@ -140,8 +140,8 @@ Total     |    14 | 422 | 60.4  |  422   |  538 |
 
 **Percentage of the requests served within a certain time (ms):**
  
-Percent | Count |
-------- | ----- |
+Percent | Time |
+------- | ---- |
 50%  |  422 |
 66%  |  426 |
 75%  |  440 |
@@ -186,8 +186,8 @@ Total       |  15 |  43 |  6.9  |   41  |   110 |
 
 **Percentage of the requests served within a certain time (ms):**
 
-Percent | Count |
-------- | ----- |
+Percent | Time |
+------- | ---- |
 50%   |  41 |
 66%   |  42 |
 75%   |  43 |
