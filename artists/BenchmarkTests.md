@@ -89,16 +89,19 @@ Processing:     4   41   2.8     40      59
 Waiting:        4   41   2.8     40      59
 Total:          4   41   2.8     40      59
 
-> - Percentage of the requests served within a certain time (ms)
- - 50%     40
- - 66%     41
- - 75%     41
- - 80%     42
- - 90%     42
- - 95%     44
- - 98%     46
- - 99%     57
- - 100%     59 (longest request)
+ - Percentage of the requests served within a certain time (ms)
+ 
+Percent | Request Count |
+------- | ------------- |
+50%  |   40 |
+66%  |   41 |
+75%  |   41 |
+80%  |   42 |
+90%  |   42 |
+95%  |   44 |
+98%  |   46 |
+99%  |   57 |
+100%  |   59 (longest request) |
 
 ###Test 3
 
