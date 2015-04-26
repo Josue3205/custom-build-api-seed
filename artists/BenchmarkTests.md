@@ -16,12 +16,12 @@ Completed Requests | 1000 | 1000 | 2000 | 2000 |
 
 ###Test 1
 
->**Parameters:**
- - Requests: 1000
+**Parameters:**
+> - Requests: 1000
  - Concurrency: 100
 
->**Results:**
- - Server Software:        Werkzeug/0.9.6
+**Results:**
+> - Server Software:        Werkzeug/0.9.6
  - Server Hostname:        localhost
  - Server Port:            5000
  - Document Path:          /artists/
