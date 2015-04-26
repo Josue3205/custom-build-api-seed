@@ -38,12 +38,12 @@ Completed Requests | 1000 | 1000 | 2000 | 2000 |
  - Transfer rate:          39.17 [Kbytes/sec] received
 
  - Connection Times (ms)
-Test | min | mean[+/-sd] | median | max |
+ - Test | min | mean(+/-sd) | median | max |
 ---- | --- | ----------- | ------ | --- |
-Connect: | 0 | 1 | 3.1 | 0 | 11 |
-Processing: | 8 | 388 | 71.9 | 407 | 423 |
-Waiting: | 2 | 387 | 71.9 | 407 | 422 |
-Total: | 13 | 389 | 69.2 | 407 | 423 |
+Connect | 0 | 1 | 3.1 | 0 | 11 |
+Processing | 8 | 388 | 71.9 | 407 | 423 |
+Waiting | 2 | 387 | 71.9 | 407 | 422 |
+Total | 13 | 389 | 69.2 | 407 | 423 |
 
 > - Percentage of the requests served within a certain time (ms)
  - 50%    407
