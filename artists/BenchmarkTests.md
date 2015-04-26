@@ -37,6 +37,7 @@ Completed Requests | 1000 | 1000 | 2000 | 2000 |
  - Time per request:       4.089 [ms] (mean, across all concurrent requests)
  - Transfer rate:          39.17 [Kbytes/sec] received
 
+ - Connection Times (ms)
 
 Test | min | mean(+/-sd) | median | max |
 ---- | --- | ----------- | ------ | --- |
