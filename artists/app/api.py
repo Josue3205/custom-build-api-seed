@@ -1,12 +1,13 @@
 import os
-from flask import Flask, url_for, jsonify, request
-from flask import make_response
+from flask import Flask, url_for, jsonify, request, render_template
+from flask.ext.bootstrap import Bootstrap
 from flask.ext.sqlalchemy import SQLAlchemy
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 db_path = os.path.join(basedir, '../data.sqlite')
 
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_path
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/firstdb'
 
@@ -103,12 +104,71 @@ def new_artist():
 
 @app.route('/artists/<int:id>', methods=['PUT'])
 def edit_artist(id):
-    artist = Artists.query.get_or_404(id)
+    artist = Artist.query.get_or_404(id)
     artist.import_data(request.json)
     db.session.add(artist)
     db.session.commit()
     return jsonify({})
 
+@app.route('/highestscore')
+def highestScore():
+    artist = Artist.query.order_by(Artist.score.desc()).limit(50)
+    highest = []
+    for artists in artist:
+        highest.append(artists.export_data())
+    return render_template('index.html',artists=highest)
+
+@app.route('/lowestscore')
+def lowestScore():
+    artist = Artist.query.order_by(Artist.score.asc()).limit(50)
+    lowest = []
+    for artists in artist:
+        lowest.append(artists.export_data())
+    return render_template('index.html',artists=lowest)
+
+@app.route('/mostLikes')
+def mostLikes():
+    artist = Artist.query.order_by(Artist.ups.asc()).limit(50)
+    highest = []
+    for artists in artist:
+        highest.append(artists.export_data())
+    return render_template('index.html',artists=highest)
+
+@app.route('/lowestLikes')
+def lowestLikes():
+    artist = Artist.query.order_by(Artist.downs.asc()).limit(50)
+    lowest = []
+    for artists in artist:
+        lowest.append(artists.export_data())
+    return render_template('index.html',artists=lowest)
+
+@app.route('/mostCommented')
+def mostCommented():
+    artist = Artist.query.order_by(Artist.comment_count.desc()).limit(50)
+    highest = []
+    for artists in artist:
+        highest.append(artists.export_data())
+    return render_template('index.html',artists=highest)
+
+@app.route('/leastCommented')
+def lowestCommented():
+    artist = Artist.query.order_by(Artist.comment_count.asc()).limit(50)
+    lowest = []
+    for artists in artist:
+        lowest.append(artists.export_data())
+    return render_template('index.html',artists=lowest)
+
+@app.route('/')
+def index():
+    highlight = {'min': 1, 'max': 2}
+    artist = Artist.query.all()
+    return render_template('index.html', artists=artist, highlight=highlight)
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('404.html')
+
+    return app
 
 if __name__ == '__main__':
     db.create_all()

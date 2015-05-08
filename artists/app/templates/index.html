@@ -1,0 +1,52 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}Music Artists{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="/" style="color:red;">List of Artist Posts</a>
+            <a href="/highestscore" class="btn" style="color:white;">Sort Highest Score</a>
+            <a href="/lowestscore" class="btn" style="color:white;">Sort Lowest Score</a>
+            <a href="/mostLikes" class="btn" style="color:white;">Sort Least Ups</a>
+            <a href="/lowestLikes" class="btn" style="color:white;">Sort Least Downs</a>
+            <a href="mostCommented" class="btn" style="color:white;">Sort Most Commented</a>
+            <a href="leastCommented" class="btn" style="color:white;">Sort Least Commented</a>
+            <a href= "/Invalid" class="btn" style="color:white;"> Dead Link </a>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container"  style="padding-top:70px">
+        <h1>Artists Post Info</h1>
+        <table class="table table-hover">
+    <tr>
+        <th>Created</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Score</th>
+        <th>Ups</th>
+        <th>Downs</th>
+        <th>Comment Count</th>
+        <th>Permalink</th>
+        <th>Thumbnail</th>
+        <th>URL</th>
+    </tr>
+    {% for artist in artists %}
+    <tr>
+        </td>
+        <td style ="word-break:break-all;">{{ artist.created }}</td>
+        <td style ="word-break:break-all;">{{ artist.title }}</td>
+        <td style ="word-break:break-all;">{{ artist.author }}</td>
+        <td style ="word-break:break-all;">{{ artist.score }}</td>
+        <td style ="word-break:break-all;">{{ artist.ups }}</td>
+        <td style ="word-break:break-all;">{{ artist.downs }}</td>
+        <td style ="word-break:break-all;">{{ artist.comment_count }}</td>
+        <td style ="word-break:break-all;">{{ artist.permalink }}</td>
+        <td style ="word-break:break-all;">{{ artist.thumbnail }}</td>
+        <td style ="word-break:break-all;">{{ artist.url }}</td>
+    </tr>
+    {% endfor %}
+        </table>
+    </div>
+{% endblock %}
